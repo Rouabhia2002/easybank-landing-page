@@ -1,0 +1,78 @@
+.header{
+height: 80px;
+
+&__nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-top: 17px;
+    margin-left: 144px;
+    margin-right: 144px;
+    margin-bottom: 18px;
+
+    
+@include max-width(1023px) {
+    margin-right: 24px;
+    margin-left: 20px;
+
+   
+}
+
+@include max-width(767px) {
+    margin-left: 24px; // Adjusted margin for mobile
+    margin-left: 20px;
+}
+}
+
+&__hamburger {
+    cursor: pointer;
+    width: 26px;
+    height: 15px;
+
+}
+
+&__hamburger div {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: $darkBlue;
+    margin-bottom: 5px;
+	border-radius: 20px;
+
+   
+}
+
+
+&__links a {
+    text-decoration: none;
+    margin-left: 34px;
+    font-size: 14px;
+    color: $grayishBlue;
+}
+
+&__links a:first-child {
+    margin-left: 0;
+  }
+
+
+&__button{
+    background: linear-gradient(to right, $limeGreen, $brightCyan );
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    height: 46px;
+    width: 163px;
+    display: inline-block;
+   
+}
+
+&__button p{
+    margin: 15px; /* Reset margin */
+    text-align: center;
+    text-decoration: none;
+    color: white;    
+    font-weight: 400;
+    font-size:14px;
+}
+}
+

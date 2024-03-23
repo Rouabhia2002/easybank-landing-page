@@ -1,0 +1,36 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-family: "Public Sans", sans-serif;
+
+}
+
+
+// Flexbox
+.flex {
+    display: flex;
+  
+    &-jc-sb {
+      justify-content: space-between;
+    }
+  
+    &-jc-c {
+      justify-content: center;
+    }
+  
+    &-ai-c {
+      align-items: center;
+    }
+  }
+
+
+  .hide-for-desktop {  
+    @include min-width(1023px) {
+    display: none;
+  }}
+
+  .hide-for-mobile {  
+    @include max-width(1023px)  {
+    display: none;
+  }}
