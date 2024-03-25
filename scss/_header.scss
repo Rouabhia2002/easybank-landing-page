@@ -1,6 +1,14 @@
 .header{
 height: 80px;
 
+@include max-width(1023px) {
+  height: 45px;
+}
+@include max-width(767px) {
+    height: 45px;
+
+}
+
 &__nav{
     display: flex;
     justify-content:space-between;
@@ -14,13 +22,13 @@ height: 80px;
 @include max-width(1023px) {
     margin-right: 24px;
     margin-left: 20px;
-
-   
+    margin-top: 19px;   
 }
 
 @include max-width(767px) {
-    margin-left: 24px; // Adjusted margin for mobile
+    margin-right: 24px;
     margin-left: 20px;
+    margin-top: 19px;
 }
 }
 
@@ -34,7 +42,7 @@ height: 80px;
 &__hamburger div {
     display: block;
     width: 26px;
-    height: 3px;
+    height: 2px;
     background: $darkBlue;
     margin-bottom: 5px;
 	border-radius: 20px;

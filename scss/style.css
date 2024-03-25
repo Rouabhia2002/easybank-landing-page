@@ -33,6 +33,16 @@ body {
 .header {
   height: 80px;
 }
+@media screen and (max-width: 1023px) {
+  .header {
+    height: 45px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header {
+    height: 45px;
+  }
+}
 .header__nav {
   display: flex;
   justify-content: space-between;
@@ -46,12 +56,14 @@ body {
   .header__nav {
     margin-right: 24px;
     margin-left: 20px;
+    margin-top: 19px;
   }
 }
 @media screen and (max-width: 767px) {
   .header__nav {
-    margin-left: 24px;
+    margin-right: 24px;
     margin-left: 20px;
+    margin-top: 19px;
   }
 }
 .header__hamburger {
@@ -62,7 +74,7 @@ body {
 .header__hamburger div {
   display: block;
   width: 26px;
-  height: 3px;
+  height: 2px;
   background: hsl(233, 26%, 24%);
   margin-bottom: 5px;
   border-radius: 20px;
@@ -92,4 +104,163 @@ body {
   color: white;
   font-weight: 400;
   font-size: 14px;
+}
+
+@media screen and (min-width: 1023px) {
+  .hero {
+    display: flex;
+  }
+}
+.hero__image-container {
+  background-image: url(/easybank-landing-page-master/images/bg-intro-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 20rem;
+  position: relative;
+}
+@media screen and (min-width: 767px) {
+  .hero__image-container {
+    min-height: 22.875rem;
+    background-size: 100%;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .hero__image-container {
+    flex: 2;
+    order: 2;
+    background-image: url(/easybank-landing-page-master/images/bg-intro-desktop.svg);
+    background-size: 108%;
+    margin-right: -240px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    min-height: 660px;
+    position: relative;
+  }
+}
+.hero__image-container:before {
+  content: "";
+  background-image: url(/easybank-landing-page-master/images/image-mockups.png);
+  position: absolute;
+  background-size: 93%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 767px) {
+  .hero__image-container:before {
+    background-position: center center;
+    background-size: 60%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .hero__image-container {
+    height: 22.875rem;
+  }
+}
+@media screen and (min-width: 767px) {
+  .hero__image-container {
+    height: 22.875rem;
+  }
+}
+.hero__text-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1023px) {
+  .hero__text-container {
+    flex: 1;
+    margin-top: 140px;
+    margin-left: 100px;
+  }
+}
+.hero__text-container h1 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 300;
+  line-height: 1.15;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+.hero__text-container p {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 38px;
+  line-height: 23px;
+  text-align: center;
+  display: block;
+  color: hsl(233, 8%, 62%);
+}
+.hero .header__button p {
+  color: white;
+}
+
+.why {
+  background-color: hsl(220, 16%, 96%);
+  margin-top: 77px;
+}
+
+.containerr {
+  padding: 30px;
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    text-align: center;
+  }
+}
+
+.containerr h2 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 300;
+  font-size: 35px;
+}
+@media screen and (max-width: 767px) {
+  .containerr h2 {
+    font-size: 29px;
+  }
+}
+
+.containerr h3 {
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+  font-size: 23px;
+}
+
+.containerr p {
+  color: hsl(233, 8%, 62%);
+  line-height: 20px;
+}
+@media screen and (max-width: 767px) {
+  .containerr p {
+    font-size: 14px;
+  }
+}
+
+.box {
+  width: 262px;
+  height: 268px;
+  margin-top: 81px;
+  margin-right: 36px;
+}
+.boxx {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .boxx {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .boxx {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 43px;
+  }
 }/*# sourceMappingURL=style.css.map */

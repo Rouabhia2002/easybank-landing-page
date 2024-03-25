@@ -1,0 +1,78 @@
+.why {
+   background-color: $lightGrayishBlue;
+   margin-top: 77px;
+
+}
+
+.containerr{
+   padding: 30px;
+   margin-left: 50px;
+} 
+
+.title {
+   @include max-width(767px) {
+      text-align: center;
+   
+      }
+}
+
+.containerr h2{
+   color: $darkBlue;
+   font-weight: 300;
+   font-size: 35px;
+
+   @include max-width(767px) {
+      font-size: 29px;
+      }
+
+}
+
+.containerr h3{
+   color:$darkBlue ;
+   font-weight: 400;
+   font-size: 23px;
+}
+
+.containerr p{
+   color: $grayishBlue;
+   line-height: 20px;
+
+   @include max-width(767px) {
+      font-size: 14px;
+      }
+}
+.box{
+   width: 262px;
+   height: 268px;
+   margin-top: 81px;
+   margin-right: 36px;
+
+   @include max-width(1023px) {
+     
+    
+    }
+}
+
+
+.boxx{
+   display: flex;
+   @include max-width(767px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    }
+
+    @include min-width(767px) {
+          
+     
+    
+    }
+
+    @include max-width(1023px) {
+      display: flex;
+      flex-wrap: wrap;  
+      margin-left: 43px;
+    
+    }
+}
+ 
