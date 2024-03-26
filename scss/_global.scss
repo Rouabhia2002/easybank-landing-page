@@ -34,3 +34,17 @@ body{
     @include max-width(1023px)  {
     display: none;
   }}
+
+
+
+  .h2{
+    color: $darkBlue;
+    font-weight: 300;
+    font-size: 35px;
+ 
+    @include max-width(767px) {
+       font-size: 29px;
+       }
+ 
+ }
+ 

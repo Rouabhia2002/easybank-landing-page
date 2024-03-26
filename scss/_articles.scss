@@ -1,0 +1,114 @@
+.art{
+height: 688px;
+background-color: $veryLightGray ;
+margin-top: 101px;
+
+
+.twodiv{
+   padding: 30px;
+   margin-left: 100px;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+  
+   @include max-width(767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-top: 76px;
+      margin-left: 21px;
+      margin-right: 21px;
+  }
+
+   .articles{
+      display: flex;
+      justify-content: center; /* horizontally center */
+      align-items: center;
+      gap: 40px;
+      @include max-width(767px) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      
+     }
+
+ 
+   @include min-width(767px) {
+     display: flex;
+     flex-wrap: wrap;
+   
+   }
+    .article{
+        display: flex;
+        flex-direction: column;
+        height: 423px;
+        width: 242px;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: all 150ms ease-in-out;
+        cursor: pointer;
+
+
+        &:hover{
+        transform: scale(1.05);   
+    }
+
+
+    @include max-width(767px) {
+      height: 354px;
+      width: 549px;
+  }
+
+ 
+    }
+
+    .imag{
+        position: relative;
+    }
+     .imag img{
+       
+        position: absolute;
+        top: 0;
+        height: 199px;
+        width: 242px;
+        border-radius: 10px;
+        background-position: top ;
+  
+        @include max-width(767px) {
+         width: 549px;
+         background-repeat: no-repeat;
+         background-size: cover;
+     }
+     }
+
+
+     .text{
+       // display: inline-block;
+        margin-top: 185px ;
+        padding: 25px;
+      
+     }
+     .titre{
+        margin-top: 15px;
+        color: $grayishBlue;
+        font-size: 11px;
+        margin-bottom: 16px;
+     }
+
+     .soustitre{
+
+        color: $darkBlue;
+        font-weight: 400;  
+        margin-bottom: 16px;  
+        font-size: 17px;    
+     }
+
+     .pargr{
+        color: $grayishBlue;
+        font-size: 13px;
+        font-weight: 200;
+
+        
+     }
+}}}
+
