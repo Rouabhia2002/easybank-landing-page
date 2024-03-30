@@ -3,6 +3,7 @@ body {
   padding: 0px;
   font-size: 15px;
   font-family: "Public Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 .flex {
@@ -42,16 +43,20 @@ body {
 }
 
 .header {
-  height: 80px;
+  margin: 0 auto;
+  max-width: 1440px;
+  z-index: 1;
 }
 @media screen and (max-width: 1023px) {
   .header {
     height: 45px;
+    z-index: 1;
   }
 }
 @media screen and (max-width: 767px) {
   .header {
     height: 45px;
+    z-index: 1;
   }
 }
 .header__nav {
@@ -117,6 +122,11 @@ body {
   font-size: 14px;
 }
 
+.hero {
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: hsl(0, 0%, 98%);
+}
 @media screen and (min-width: 1023px) {
   .hero {
     display: flex;
@@ -141,7 +151,7 @@ body {
     flex: 2;
     order: 2;
     background-image: url(/easybank-landing-page-master/images/bg-intro-desktop.svg);
-    background-size: 108%;
+    background-size: 100%;
     margin-right: -240px;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -162,7 +172,7 @@ body {
 @media screen and (min-width: 767px) {
   .hero__image-container:before {
     background-position: center center;
-    background-size: 60%;
+    background-size: 69%;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -211,12 +221,13 @@ body {
 
 .why {
   background-color: hsl(220, 16%, 96%);
-  margin-top: 101px;
 }
 
 .containerr {
   padding: 30px;
   margin-left: 100px;
+  max-width: 69.375rem;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 767px) {
@@ -277,13 +288,18 @@ body {
 }
 
 .art {
-  height: 688px;
   background-color: hsl(0, 0%, 98%);
-  margin-top: 101px;
+}
+.art__spacing {
+  max-width: 69.375rem;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-right: 1.5rem;
+  padding-bottom: 40px;
+  padding-left: 1.5rem;
+  margin-bottom: 30px;
 }
 .art .twodiv {
-  padding: 30px;
-  margin-left: 100px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -292,7 +308,7 @@ body {
   .art .twodiv {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     margin-top: 76px;
     margin-left: 21px;
     margin-right: 21px;
@@ -333,7 +349,7 @@ body {
 @media screen and (max-width: 767px) {
   .art .twodiv .articles .article {
     height: 354px;
-    width: 549px;
+    width: 450px;
   }
 }
 .art .twodiv .articles .imag {
@@ -349,7 +365,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .art .twodiv .articles .imag img {
-    width: 549px;
+    width: 450px;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -374,4 +390,137 @@ body {
   color: hwb(233 59% 35%);
   font-size: 13px;
   font-weight: 200;
+}
+
+.footer {
+  background-color: hsl(233, 26%, 24%);
+  color: white;
+}
+.footer__spacing {
+  max-width: 69.375rem;
+  margin: 0 auto;
+  max-width: 69.375rem;
+  padding-top: 40px;
+  padding-right: 1.5rem;
+  padding-bottom: 40px;
+  padding-left: 1.5rem;
+}
+.footer__cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1023px) {
+  .footer__cont {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 3fr;
+    grid-template-rows: auto auto; /* Changed from 1fr auto */
+    grid-template-areas: "logo links1 links2 btn" "logos links1 links2 copyr"; /* Adjusted to include links1 and links2 in both rows */
+    gap: 1rem;
+    justify-items: start;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .footer__logo {
+    justify-self: start; /* Align the logo to the start of its grid area */
+    align-self: start;
+    grid-area: logo;
+  }
+}
+.footer__logos {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+}
+.footer__logos a svg path {
+  transition: fill 150ms ease-in-out;
+}
+.footer__logos a:hover svg path {
+  fill: hsl(136, 65%, 51%);
+}
+@media screen and (min-width: 1023px) {
+  .footer__logos {
+    grid-area: logos;
+    justify-self: start;
+    margin-top: 0px;
+  }
+}
+.footer__links-col1 {
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 30px;
+  transition: color 150ms ease-in-out;
+}
+@media screen and (min-width: 1023px) {
+  .footer__links-col1 {
+    justify-self: start; /* Align the logo to the start of its grid area */
+    align-self: start;
+    grid-area: links1;
+    margin-top: 0px;
+  }
+}
+.footer__links-col1 :hover {
+  color: hsl(136, 65%, 51%);
+}
+.footer__links-col1 a {
+  line-height: 40px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+.footer__links-col2 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 40px;
+  margin-bottom: 40px;
+  transition: color 150ms ease-in-out;
+}
+@media screen and (min-width: 1023px) {
+  .footer__links-col2 {
+    justify-self: start; /* Align the logo to the start of its grid area */
+    align-self: start;
+    grid-area: links2;
+    margin-bottom: 0px;
+  }
+}
+.footer__links-col2 :hover {
+  color: hsl(136, 65%, 51%);
+}
+.footer__links-col2 a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+@media screen and (min-width: 1023px) {
+  .footer__btn {
+    grid-area: btn;
+    align-self: end;
+    justify-self: end;
+  }
+}
+.footer .header__button {
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 1023px) {
+  .footer .copyright {
+    grid-area: copyr;
+    align-self: end;
+    justify-self: end;
+  }
+}
+.footer__attribution {
+  margin-top: 45px;
+  text-align: center;
+}
+.footer__attribution a {
+  color: white;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

@@ -1,11 +1,17 @@
 .header{
-height: 80px;
-
+margin: 0 auto;
+max-width: 1440px;
+z-index: 1;
 @include max-width(1023px) {
   height: 45px;
+  z-index: 1;
+
+
 }
 @include max-width(767px) {
     height: 45px;
+    z-index: 1;
+
 
 }
 

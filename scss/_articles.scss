@@ -1,20 +1,25 @@
 .art{
-height: 688px;
 background-color: $veryLightGray ;
-margin-top: 101px;
 
+&__spacing{
+   max-width: 69.375rem;
+   margin: 0 auto;
+   padding-top: 40px;
+   padding-right: 1.5rem;
+   padding-bottom: 40px;
+   padding-left: 1.5rem;
+   margin-bottom: 30px;
+}
 
 .twodiv{
-   padding: 30px;
-   margin-left: 100px;
+   
    display: flex;
    flex-direction: column;
    align-items: start;
-  
    @include max-width(767px) {
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: center;
       margin-top: 76px;
       margin-left: 21px;
       margin-right: 21px;
@@ -56,7 +61,7 @@ margin-top: 101px;
 
     @include max-width(767px) {
       height: 354px;
-      width: 549px;
+      width: 450px;
   }
 
  
@@ -75,7 +80,7 @@ margin-top: 101px;
         background-position: top ;
   
         @include max-width(767px) {
-         width: 549px;
+         width: 450px;
          background-repeat: no-repeat;
          background-size: cover;
      }

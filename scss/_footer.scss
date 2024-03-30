@@ -1,0 +1,178 @@
+.footer{
+    background-color: $darkBlue;
+    color: white;
+
+    &__spacing{
+        max-width: 69.375rem;
+        margin: 0 auto;
+        max-width: 69.375rem;
+        padding-top: 40px;
+        padding-right: 1.5rem;
+        padding-bottom: 40px;
+        padding-left: 1.5rem;
+    }
+
+    &__cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+      
+        @include min-width(1023px) {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 3fr;
+            grid-template-rows: auto auto; /* Changed from 1fr auto */
+            grid-template-areas:
+                'logo links1 links2 btn'
+                'logos links1 links2 copyr'; /* Adjusted to include links1 and links2 in both rows */
+            gap: 1rem;
+            justify-items: start;
+        }
+    }
+
+    
+    
+    &__logo{
+        
+ 
+
+        @include min-width(1023px) {
+           
+            justify-self: start; /* Align the logo to the start of its grid area */
+            align-self: start;
+            grid-area: logo;
+       
+        }
+    }
+
+    &__logos{
+        margin-top: 30px;
+        display: flex;
+        gap: 16px;
+        
+      a{
+        svg path{
+            transition: fill 150ms ease-in-out;
+          }
+    
+          &:hover svg path {
+            fill: $limeGreen;
+          }    
+      }
+          
+        @include min-width(1023px) {
+            grid-area: logos;
+            justify-self:start; 
+            margin-top: 0px;
+        }
+    }
+
+    &__links-col1{
+        margin-top: 30px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        text-decoration: none;
+        line-height: 30px;
+        transition: color 150ms ease-in-out;
+        
+        @include min-width(1023px) {
+           
+            justify-self: start; /* Align the logo to the start of its grid area */
+            align-self: start;
+            grid-area: links1;
+            margin-top: 0px;
+        }
+        
+        :hover{
+            color: $limeGreen;
+        }
+    }
+    &__links-col1 a{
+       line-height: 40px;
+       color: white;
+       text-decoration: none;
+       font-size: 15px;
+       font-weight: 400;
+    
+       
+    }
+
+
+    &__links-col2{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        text-decoration: none;
+        line-height: 40px;
+        margin-bottom: 40px; 
+        transition: color 150ms ease-in-out;
+
+           
+            
+        @include min-width(1023px) {
+            justify-self: start; /* Align the logo to the start of its grid area */
+            align-self: start;
+            grid-area: links2;
+            margin-bottom: 0px;
+            
+        }
+        
+           
+        
+        :hover{
+            color: $limeGreen;
+        }
+        
+    }
+
+    &__links-col2 a{
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 400;
+        
+        
+     }
+    &__btn{
+        @include min-width(1023px) {
+            grid-area: btn;
+            align-self: end;
+            justify-self: end;
+            
+        }
+    }
+        
+        
+    .header__button{
+        margin-bottom: 15px;
+    
+    }
+
+    .copyright{ 
+
+        @include min-width(1023px) {
+            grid-area: copyr;
+            align-self: end;
+            justify-self: end;
+        }
+    }
+
+
+    &__attribution{
+       margin-top: 45px;
+       text-align: center;
+    
+       
+    }
+
+
+    &__attribution a{
+        color: white;
+        text-decoration: none;
+       
+        
+       
+    }
+ 
+}
