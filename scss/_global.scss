@@ -4,10 +4,12 @@ body{
     font-size: 15px;
     font-family: "Public Sans", sans-serif;
     overflow-x: hidden;
-
+    
 }
 
-
+.no-scrol{
+  overflow: hidden;
+}
 
 
 // Flexbox

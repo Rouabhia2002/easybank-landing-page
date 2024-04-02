@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+.no-scrol {
+  overflow: hidden;
+}
+
 .flex {
   display: flex;
 }
@@ -45,21 +49,33 @@ body {
 .header {
   margin: 0 auto;
   max-width: 1440px;
-  z-index: 1;
+  z-index: 3;
+  height: 58px;
+  position: relative;
+}
+.header.open .header__hamburger {
+  transition: all 300ms ease-in-out;
+}
+.header.open .header__hamburger > div:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+.header.open .header__hamburger > div:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__hamburger > div:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
 }
 @media screen and (max-width: 1023px) {
   .header {
-    height: 45px;
     z-index: 1;
   }
 }
 @media screen and (max-width: 767px) {
   .header {
-    height: 45px;
     z-index: 1;
   }
 }
-.header__nav {
+.header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,16 +83,18 @@ body {
   margin-left: 144px;
   margin-right: 144px;
   margin-bottom: 18px;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (max-width: 1023px) {
-  .header__nav {
+  .header nav {
     margin-right: 24px;
     margin-left: 20px;
     margin-top: 19px;
   }
 }
 @media screen and (max-width: 767px) {
-  .header__nav {
+  .header nav {
     margin-right: 24px;
     margin-left: 20px;
     margin-top: 19px;
@@ -121,9 +139,32 @@ body {
   font-weight: 400;
   font-size: 14px;
 }
+.header .menu {
+  background-color: white;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+  height: 240px;
+  z-index: 4;
+  position: absolute;
+  text-align: center;
+}
+.header .menu a {
+  display: block;
+  text-decoration: none;
+  color: hsl(233, 26%, 24%);
+  line-height: 35px;
+  margin-top: 10px;
+}
 
 .hero {
   margin: 0 auto;
+  z-index: 1;
   max-width: 1440px;
   background-color: hsl(0, 0%, 98%);
 }
@@ -131,6 +172,15 @@ body {
   .hero {
     display: flex;
   }
+}
+.hero.overlay {
+  position: fixed;
+  top: 58px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 0;
+  background-image: linear-gradient(hsl(233, 26%, 24%), transparent);
 }
 .hero__image-container {
   background-image: url(/easybank-landing-page-master/images/bg-intro-mobile.svg);
@@ -221,6 +271,7 @@ body {
 
 .why {
   background-color: hsl(220, 16%, 96%);
+  z-index: 0;
 }
 
 .containerr {
@@ -523,4 +574,44 @@ body {
 .footer__attribution a {
   color: white;
   text-decoration: none;
+}
+
+.has-fade {
+  visibility: hidden;
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 200ms ease-in-out forwards;
 }/*# sourceMappingURL=style.css.map */

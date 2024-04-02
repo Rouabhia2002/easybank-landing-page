@@ -1,16 +1,28 @@
 .hero {
   margin: 0 auto;
+  z-index: 1;
   max-width: 1440px;
   background-color: $veryLightGray ;
-
+  
     @include min-width(1023px) {
      display: flex;
  
     }
 
+    &.overlay {
+        //opacity: 0;
+        position: fixed;
+        top: 58px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        z-index: 0;
+        background-image: linear-gradient($darkBlue, transparent);       
+      }
 
 &__image-container {
-   background-image: url(/easybank-landing-page-master/images/bg-intro-mobile.svg);
+
+  background-image: url(/easybank-landing-page-master/images/bg-intro-mobile.svg);
    background-size:cover;
    background-repeat: no-repeat;
    background-position: center center;
@@ -117,4 +129,8 @@
     color: white;
    
 }
+
+
+
+
 }
